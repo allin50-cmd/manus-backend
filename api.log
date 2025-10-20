@@ -1,0 +1,159 @@
+nohup: ignoring input
+INFO:     Started server process [62693]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.68.21.1:40014 - "GET / HTTP/1.1" 200 OK
+INFO:     10.68.21.1:40026 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     10.68.21.1:48782 - "GET /api/obligations HTTP/1.1" 200 OK
+INFO:     10.68.21.1:47478 - "OPTIONS /api/users HTTP/1.1" 200 OK
+INFO:     10.68.21.1:47480 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.68.21.1:39834 - "OPTIONS /api/companies HTTP/1.1" 200 OK
+INFO:     10.68.21.1:39842 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     10.68.21.1:58866 - "GET /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:36044 - "GET /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:36048 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     10.68.21.1:36062 - "GET /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:42020 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.68.21.1:33520 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     10.68.21.1:54376 - "GET /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:53386 - "OPTIONS /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:53402 - "POST /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:53410 - "GET /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:48274 - "GET /api/agents HTTP/1.1" 200 OK
+INFO:     10.68.21.1:47620 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     10.68.21.1:47628 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:52896 - "GET / HTTP/1.1" 200 OK
+INFO:     10.163.246.1:52908 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:54236 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     10.163.246.1:33544 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     10.163.246.1:33548 - "GET /api/obligations HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47768 - "GET / HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47776 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47782 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47798 - "GET /api/agents HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47810 - "GET /api/obligations HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47826 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47836 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47844 - "GET /api/invoices HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47848 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47858 - "GET /api/reports HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47862 - "GET /api/crm/leads HTTP/1.1" 404 Not Found
+INFO:     10.163.246.1:47872 - "GET /api/bookings HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47876 - "GET /api/settings HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47886 - "GET /api/analytics HTTP/1.1" 404 Not Found
+INFO:     10.163.246.1:47888 - "GET /api/notifications HTTP/1.1" 404 Not Found
+INFO:     10.163.246.1:47892 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47896 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47912 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47918 - "GET /api/nonexistent HTTP/1.1" 404 Not Found
+INFO:     10.163.246.1:47930 - "GET /api/users/99999 HTTP/1.1" 405 Method Not Allowed
+INFO:     10.163.246.1:47934 - "POST /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47944 - "GET /api/users/4 HTTP/1.1" 405 Method Not Allowed
+INFO:     10.163.246.1:47958 - "PUT /api/users/4 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/fastapi/applications.py", line 1133, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/usr/local/lib/python3.11/dist-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/dist-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/fastapi/routing.py", line 123, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/dist-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/dist-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/dist-packages/fastapi/routing.py", line 109, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/fastapi/routing.py", line 387, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/fastapi/routing.py", line 288, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fineguard-backend/extended_api.py", line 142, in update_user
+    (user['name'], user['email'], user['role'], user['status'], user_id))
+                   ~~~~^^^^^^^^^
+KeyError: 'email'
+INFO:     10.163.246.1:47966 - "DELETE /api/users/4 HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46826 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46840 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46850 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46860 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46864 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46880 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46892 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46896 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46910 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46916 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46920 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46934 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46944 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46958 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46962 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46978 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46990 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:46996 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47002 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47016 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47026 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47028 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47032 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47038 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47046 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47062 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47064 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47070 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47072 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47074 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47090 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47104 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47116 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47132 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47134 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47138 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47148 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47162 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47176 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47178 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47180 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47194 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47204 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47212 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47226 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47230 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47236 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47240 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47244 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     10.163.246.1:47254 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [62693]
