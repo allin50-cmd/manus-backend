@@ -386,17 +386,61 @@ async def get_accounting_service_categories():
 @app.get("/api/accounting/packages")
 async def get_accounting_packages():
     return [
-        {"id": 1, "name": "Starter", "price": 99, "features": ["Basic bookkeeping", "Monthly reports"]},
-        {"id": 2, "name": "Professional", "price": 299, "features": ["Full bookkeeping", "Tax filing", "Payroll"]},
-        {"id": 3, "name": "Enterprise", "price": 599, "features": ["Everything", "Dedicated accountant", "CFO services"]}
+        {
+            "id": 1, 
+            "name": "Starter", 
+            "price": 199, 
+            "period": "month",
+            "description": "Perfect for small businesses getting started",
+            "popular": False,
+            "features": [
+                "Basic bookkeeping", 
+                "Monthly financial reports", 
+                "Bank reconciliation",
+                "Expense tracking",
+                "Email support"
+            ]
+        },
+        {
+            "id": 2, 
+            "name": "Professional", 
+            "price": 649, 
+            "period": "month",
+            "description": "Comprehensive accounting for growing businesses",
+            "popular": True,
+            "features": [
+                "Full bookkeeping services", 
+                "Tax filing & planning", 
+                "Payroll management",
+                "Quarterly business reviews",
+                "Dedicated account manager",
+                "Priority phone support"
+            ]
+        },
+        {
+            "id": 3, 
+            "name": "Enterprise", 
+            "price": "Custom", 
+            "period": "pricing",
+            "description": "Tailored solutions for established businesses",
+            "popular": False,
+            "features": [
+                "Everything in Professional", 
+                "Dedicated accountant team", 
+                "CFO advisory services",
+                "Strategic financial planning",
+                "Unlimited consultations",
+                "24/7 priority support"
+            ]
+        }
     ]
 
 @app.get("/api/accounting/add-on-services")
 async def get_accounting_addon_services():
     return [
-        {"id": 1, "name": "VAT Returns", "price": 50},
-        {"id": 2, "name": "Year-end Accounts", "price": 200},
-        {"id": 3, "name": "Tax Planning", "price": 150}
+        {"id": 1, "name": "VAT Returns", "price": 99, "description": "Quarterly VAT return preparation and submission"},
+        {"id": 2, "name": "End of Year Accounts", "price": 299, "description": "Complete year-end accounts preparation and filing"},
+        {"id": 3, "name": "Tax Planning", "price": 249, "description": "Strategic tax planning and optimization consultation"}
     ]
 
 @app.get("/api/accounting/testimonials")
